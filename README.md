@@ -3,8 +3,8 @@
 Yocto BSP for ST stm32mp boards by KOAN Software - Bergamo - Italy
 ----------------------------------------------------------------
 
-Quick Start Guide
------------------
+Quick Start Guide - 'dunfell'
+------------------------------
 
 Once you have downloaded the source of all projects, you will have to
 call:
