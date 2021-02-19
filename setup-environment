@@ -164,7 +164,11 @@ EOF
         -e "s,PACKAGE_CLASSES ?=.*,PACKAGE_CLASSES ?= 'package_ipk',g" \
         -i conf/local.conf
 
-    cp $TEMPLATES/* conf/
+    if [ -e $TEMPLATES/$DISTRO.conf ]; then
+    	cp $TEMPLATES/$DISTRO.conf conf/bblayers.conf
+    else
+    	cp $TEMPLATES/bblayers.conf conf/
+    fi
 
     for s in $HOME/.oe $HOME/.yocto; do
         if [ -e $s/site.conf ]; then
